@@ -6,7 +6,7 @@ const axios = require('axios');
 const cors = require("cors");
 app.use(cors())
 app.get('/', (req, res) => {
-    axios.get('http://127.0.0.1:5000/')
+    axios.get('https://rest-service-802.herokuapp.com//')
         .then(response => {
             let test = response.data.routes[0].summary
             res.json(test)
